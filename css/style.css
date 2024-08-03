@@ -1,0 +1,29 @@
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+ul{
+    list-style: none;
+}
+.menu-item{
+    position: relative;
+}
+.menu-link{
+    display: block;
+    padding: 10px 20px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.submenu{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    display: none;
+    background-color: lime;
+}
+.menu-link:hover + .submenu{
+    display: block;
+}
