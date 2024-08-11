@@ -105,32 +105,33 @@ ul{
     position: relative;
     display: flex;
     padding: 10px 15px;
-    background-color: rgb(143, 66, 219);
+    background-color: rgb(151, 79, 223);
     border-radius: 4px;
     border: 1px solid black;
-    color: rgba(245, 244, 244, 0.779);
+    color: rgba(206, 206, 206, 0.779);
     align-items: center;
     gap: 5px;
+    overflow: hidden;
+    transition: background-color 500ms ease-in-out;
 }
 .button:hover{
     cursor: pointer;
-    background-color: rgb(113, 33, 193);
+    background-color: rgb(89, 26, 153);
     color: white;
 }
-.button::before{
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: azure;
-    transition: transform 500ms ease;
-}
+.button::before,
 .button::after{
     content: "";
-    position: absolute;
     display: inline-block;
     width: 20px;
     height: 20px;
+    transition: transform 500ms ease 500ms;
+}
+.button::before{
+    background-color: azure;
+}
+.button::after{
+    position: absolute;
     background-color: rgb(7, 218, 218);
     transform: translateY(calc(100% + 15px));
 }
